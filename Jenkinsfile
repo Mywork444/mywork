@@ -1,6 +1,8 @@
 pipeline {
   agent any
-	triggers{cron(* * * * *)
+	triggers{
+	pollSCM '* * * * *'
+	
 }
   parameters {
     gitParameter branchFilter: 'origin/(.*)', defaultValue: 'null', name: 'BRANCH', type: 'PT_BRANCH'

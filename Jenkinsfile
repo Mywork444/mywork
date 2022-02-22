@@ -16,9 +16,11 @@ pipeline {
     }
     stage('shell script'){
 	steps {
-          sh 'sh test.sh'
-	}
+                dir("/var/jenkins_home/workspace/testinggit/mywork/testshell") {
+                sh 'sh test.sh'
+                }
       }
+    }
     stage('Testing the branch name'){
         steps {
           echo scm.branches[0].name.split("/")[1]

@@ -16,7 +16,7 @@ pipeline {
     }
     stage('shell script'){
 	steps {
-                dir("/var/jenkins_home/workspace/testinggit/mywork/testshell") {
+                dir("/var/jenkins_home/workspace/testinggit/mywork/testshell/") {
                 sh 'sh test.sh'
                 }
       }
